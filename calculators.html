@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Mortgage Calculators</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#downpayment-calculator">Downpayment Calculator</a>
+        <a href="#emi-calculator">EMI Calculator</a>
+    </nav>
+</header>
+
+<main>
+    <section id="downpayment-calculator">
+        <h2>Downpayment Calculator</h2>
+        <div class="calculator">
+            <input type="number" id="propertyValue" placeholder="Property Value">
+            <input type="number" id="downpaymentPercentage" placeholder="Downpayment %">
+            <button onclick="calculateDownpayment()">Calculate</button>
+            <p id="downpaymentResult"></p>
+        </div>
+    </section>
+
+    <section id="emi-calculator">
+        <h2>EMI Calculator</h2>
+        <div class="calculator">
+            <input type="number" id="loanAmount" placeholder="Loan Amount">
+            <input type="number" id="interestRate" placeholder="Annual Interest Rate (%)">
+            <input type="number" id="loanTerm" placeholder="Loan Term (Years)">
+            <button onclick="calculateEMI()">Calculate</button>
+            <p id="emiResult"></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Independent Mortgage Agent. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
