@@ -55,3 +55,16 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  /* Makes the image round */
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
