@@ -1,70 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
+header, footer {
+    background-color: #0056b3;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
 nav a {
     color: white;
-    margin: 0 10px;
+    margin: 0 8px;
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #ffdd57;
+}
+
 section {
-    padding: 20px;
-    margin: 10px;
+    margin-bottom: 40px;
 }
 
-.calculator {
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    margin-top: 10px;
-}
-
-input[type="number"] {
-    width: 90%;
-    padding: 8px;
-    margin: 5px 0;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
 .profile-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;  /* Makes the image round */
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #007bff;
+    border: 2px solid #0056b3;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.calculator input, .calculator button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+@media(max-width:768px) {
+    .profile-container {
+        flex-direction: column;
+    }
 }
