@@ -1,74 +1,100 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header, footer {
-    background-color: #0056b3;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 main {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
 nav a {
-    color: white;
-    margin: 0 8px;
-    text-decoration: none;
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
 }
 
 nav a:hover {
-    color: #ffdd57;
+  color: #ffdd57;
 }
 
 section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .profile-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .profile-image {
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #0056b3;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0056b3;
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
+.button:hover {
+  background-color: #218838;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+.calculator {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input, .calculator button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ✅ Two-column responsive form grid */
 form.form-grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
+  max-width: 700px;
+  margin: 1rem auto;
   background: #f9f9f9;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .form-group {
@@ -78,7 +104,7 @@ form.form-grid-2x2 {
 
 label {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 input, textarea {
@@ -93,7 +119,6 @@ input, textarea {
 .form-submit {
   grid-column: 1 / -1;
   text-align: center;
-  margin-top: 1rem;
 }
 
 button {
@@ -108,4 +133,14 @@ button {
 
 button:hover {
   background-color: #004499;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  form.form-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
 }
